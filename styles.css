@@ -1,3 +1,31 @@
+html, body, div, span, applet, object, iframe, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/*
+  Licensing information for the reset rules above:
+
+  http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
 html {
   background-color: #EFEFEF;
   font-family: sans-serif;
@@ -9,15 +37,16 @@ body {
 }
 
 header {
-  width: 100%;
+  width: auto;
   height: 10%;
   color: white;
-  background-color: #2B2B2B;
+  background-color: #2f1d38;
   margin: 0px;
   padding: .5rem;
   padding-top: 5.5rem;
   padding-bottom: 1rem;
   border: 0px;
+  overflow: hidden;
 }
 
 header > h1 {
@@ -30,6 +59,7 @@ nav {
   grid-template-columns: 3rem 8rem 3rem 8rem 3rem 10rem;
   padding-left: 2rem;
   padding-bottom: .5rem;
+  width: 50%;
 }
 
 nav > button,
@@ -42,12 +72,17 @@ nav > button,
   align-content: center;
 }
 
+nav > button:hover {
+  background-color: #bcf48b;
+}
+
 nav > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow-x: visible;
   color: #676767;
+  cursor: pointer;
 }
 
 .admin-options > button > img,
@@ -56,6 +91,7 @@ nav > button > img {
   width: 1.2rem;
   margin-top: 15%;
   margin-right: 12%;
+  cursor: pointer;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -93,11 +129,13 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0rem;
   right: 5%;
   margin-bottom: 2rem;
-  color: #3be590;
+  color: #f9c893;
+  cursor: pointer;
 }
 
 .admin-options > button {
-  background-color: #91ffc8;
+  background-color: #f9c893;
+  cursor: pointer;
 }
 
 .admin-dropdown {
@@ -117,57 +155,66 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0px;
   margin-top: .5rem;
   margin-left: .5rem;
-  background-color: #91ffc8;
+  background-color: #f9c893;
   height: 1rem;
   border-radius: 50%;
-  /* opacity: 70%; */
-}
-
-.arrow-container > img {
-  /* opacity: 80%; */
 }
 
 .white {
   color: white;
 }
 
+.share-text {
+  width: auto;
+  position: sticky;
+}
+
 .card-area-title {
   color: black;
   padding: 1rem 0rem 1rem 2rem;
+  position: sticky;
+}
+
+.card-area-title > h1 {
+  width: 5rem;
 }
 
 .card-area {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  /* width: inherit; */
 }
 
 .card-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 24rem;
-
+  grid-template-columns: repeat(4, 15rem);
+  grid-auto-rows: 26rem;
   grid-gap: 1rem;
   justify-content: center;
-  width: 95%;
+  width: auto;
   padding: 0rem 2rem 2rem 2rem;
-  /* background-color: lightblue; */
 }
 
-@media (min-width: 600px) {
-  .card-container { grid-template-columns: repeat(2, 19rem); }
+@media (min-width: 540px) {
+  .card-container {
+    grid-template-columns: repeat(2, 19rem);
+  }
 }
 
 @media (min-width: 1000px) {
-  .card-container { grid-template-columns: repeat(3, 19rem); }
+  .card-container {
+    grid-template-columns: repeat(3, 19rem);
+  }
 }
 
 @media (min-width: 1200px) {
-  .card-container { grid-template-columns: repeat(4, 19rem); }
+  .card-container {
+    grid-template-columns: repeat(4, 19rem);
+  }
 }
 
 .card-title {
-  /* grid-area: header; */
   height: 1rem;
 }
 
@@ -183,16 +230,20 @@ h1, h2, h3, h4, h5, h6 {
 .card > img {
   width: 100%;
   height: 100%;
-  /* border-radius: 1rem; */
   overflow: hidden;
+  cursor: pointer;
 }
 
 .thumbnail-container {
   height: 40%;
 }
 
+.thumbnail-container:hover {
+  filter: brightness(100%);
+}
+
 .darkened {
-  filter: brightness(70%);
+  filter: brightness(80%);
 }
 
 .view-count-container {
@@ -209,10 +260,19 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50%;
   margin: .7rem;
   padding: .5rem;
-  /* opacity: 90%; */
+  cursor: pointer;
 }
 
+.share-button:hover {
+  background: rgb(242,215,255);
+  background: linear-gradient(138deg, rgba(242,215,255,1) 28%, rgba(234,190,255,1) 50%, rgba(225,164,255,1) 50%);
+  box-shadow: 2px 2px 2px black;
+}
 
+.share-button:active {
+  background: rgb(242,215,255);
+  background: linear-gradient(320deg, rgba(242,215,255,1) 28%, rgba(234,190,255,1) 50%, rgba(225,164,255,1) 57%);
+}
 
 .view-info {
   position: absolute;
@@ -222,29 +282,29 @@ h1, h2, h3, h4, h5, h6 {
   top: 1rem;
 }
 
-.view-count {
-
+.attachment-count {
+  cursor: pointer;
 }
 
-.recipient-name {
+.rabbit-name {
   font-weight: bold;
-
 }
 
 .date-info {
   color: darkgray;
 }
 
-.recipient-url {
+.rabbit-url {
   word-wrap: break-word;
   color: #848484;
   background-color: #EFEFEF;
   margin: 1rem;
   margin-left: 0rem;
   padding: .4rem;
+  cursor: pointer;
 }
 
-.recipient-info,
+.rabbit-info,
 .playlist-info {
   display: flex;
   flex-direction: column;
