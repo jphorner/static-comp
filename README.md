@@ -17,7 +17,7 @@ For this project, I was instructed to create a static site design based on a ref
 ## Assets
 
 **Icons:**
-- Designed by users at [flaticon.com](https://www.flaticon.com/)
+- Designed by users at [flaticon.com](https://www.flaticon.com/):
   - Arrow Share button by [Those Icons](https://www.flaticon.com/authors/those-icons)
   - Header Share button by [Catalin Fertu](https://www.flaticon.com/authors/catalin-fertu)
   - List Icon by [Pixel Perfect](https://www.flaticon.com/authors/pixel-perfect)
