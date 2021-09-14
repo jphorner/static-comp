@@ -129,12 +129,12 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0rem;
   right: 5%;
   margin-bottom: 2rem;
-  color: #f9c893;
+  color: #75b79f;
   cursor: pointer;
 }
 
 .admin-options > button {
-  background-color: #f9c893;
+  background-color: #75b79f;
   cursor: pointer;
 }
 
@@ -155,7 +155,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0px;
   margin-top: .5rem;
   margin-left: .5rem;
-  background-color: #f9c893;
+  background-color: #75b79f;
   height: 1rem;
   border-radius: 50%;
 }
@@ -183,7 +183,6 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* width: inherit; */
 }
 
 .card-container {
@@ -232,10 +231,12 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   overflow: hidden;
   cursor: pointer;
+  object-fit: cover;
 }
 
 .thumbnail-container {
   height: 40%;
+  /* object-fit: cover; */
 }
 
 .thumbnail-container:hover {
