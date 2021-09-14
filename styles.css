@@ -38,9 +38,9 @@ body {
 
 header {
   width: auto;
-  height: 10%;
+  height: 8%;
   color: white;
-  background-color: #2f1d38;
+  background-color: #3d2649;
   margin: 0px;
   padding: .5rem;
   padding-top: 5.5rem;
@@ -73,7 +73,7 @@ nav > button,
 }
 
 nav > button:hover {
-  background-color: #bcf48b;
+  background-color: #dfb2f7;
 }
 
 nav > div {
@@ -98,6 +98,18 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0px;
 }
 
+.slogan-container {
+  position: absolute;
+  top: 4%;
+  left: 3%;
+}
+
+.slogan-container > h3 {
+  font-style: italic;
+  color: white;
+  opacity: 80%;
+}
+
 .miniature {
   height: 1.5rem;
   width: 1.5rem;
@@ -105,7 +117,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo {
   position: absolute;
-  right: 5rem;
+  right: 7%;
   top: 2rem;
   margin: 0px;
 }
@@ -129,12 +141,12 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0rem;
   right: 5%;
   margin-bottom: 2rem;
-  color: #75b79f;
+  color: #fcf4c9;
   cursor: pointer;
 }
 
 .admin-options > button {
-  background-color: #75b79f;
+  background-color: #fcf4c9;
   cursor: pointer;
 }
 
@@ -155,7 +167,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0px;
   margin-top: .5rem;
   margin-left: .5rem;
-  background-color: #75b79f;
+  background-color: #fcf4c9;
   height: 1rem;
   border-radius: 50%;
 }
@@ -164,9 +176,14 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
+.header-shares {
+  background-color: #fcf4c9;
+}
+
 .share-text {
   width: auto;
   position: sticky;
+  color: #fcf4c9;
 }
 
 .card-area-title {
